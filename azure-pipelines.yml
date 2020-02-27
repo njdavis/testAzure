@@ -50,8 +50,8 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'anditommy-docker-hub'
-    repository: 'anditommy/dfr-docker-azure'
+    containerRegistry: 'HighTide'
+    repository: 'njdavis/testAzure'
     tags: latest
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
