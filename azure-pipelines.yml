@@ -6,6 +6,11 @@ pool:
 variables:
   imageName: 'pythonsample:$(Build.BuildId)'
   # define two more variables dockerId and dockerPassword in the build pipeline in UI
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'd94cc24e-004a-466f-97a5-642ec3f08191'
+  imageRepository: 'hightidebackend'
+  containerRegistry: 'hightide.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
 
 steps:
 - task: UsePythonVersion@0
