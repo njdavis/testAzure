@@ -1,0 +1,15 @@
+docker build
+
+docer-compose build
+
+##Creating a project
+docker-compose run app sh -c "django-admin startproject app"
+
+##Creating an app
+docker-compose run app sh -c "python manage.py startapp core"
+
+##Run unit test and lint
+docker-compose run app sh -c "python manage.py test && flake8"
+
+##Make migrations
+docker-compose run app sh -c "python manage.py makemigrations"

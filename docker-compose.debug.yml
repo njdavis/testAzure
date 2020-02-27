@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  dfr-docker-azure:
+    image: dfr-docker-azure
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
